@@ -3,16 +3,16 @@ dataSet[dataSetVersion] = {};
 
 dataSet[dataSetVersion].options = [
   {
-    name: "Filter by Group",
+    name: "Filter by Game",
     key: "groups",
-    tooltip: "Check this to restrict to certain groups.",
+    tooltip: "Check this to restrict to certain games.",
     checked: true,
     sub: [
-      { name: "Love is All Around", key: "LiAA" },
-	  { name: "Love is All Around DLC", key: "LiAADLC"},
-	  { name: "Hello Love: 18 Again", key: "HL18A"},
 	  { name: "Director Simulator", key: "DS"},
-	  { name: "Five Hearts Under One Roof", key: "FHUOR"}	  
+	  { name: "Five Hearts Under One Roof", key: "FHUOR"},
+	  { name: "Hello Love: 18 Again", key: "HL18A"}, 
+      { name: "Love is All Around", key: "LiAA" },
+	  { name: "Love is All Around DLC", key: "LiAADLC"}
     ]
   }
 ];
