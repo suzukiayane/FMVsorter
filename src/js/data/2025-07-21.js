@@ -1,4 +1,4 @@
-dataSetVersion = "2025-04-08"; // Change this when creating a new data set version. YYYY-MM-DD format.
+dataSetVersion = "2025-07-21"; // Change this when creating a new data set version. YYYY-MM-DD format.
 dataSet[dataSetVersion] = {};
 
 dataSet[dataSetVersion].options = [
@@ -10,6 +10,7 @@ dataSet[dataSetVersion].options = [
     sub: [
 	  { name: "Charming Hearts", key: "CH"},	
 	  { name: "Director Simulator", key: "DS"},
+	  { name: "Don't Fool Me, Beauties!", key: "DFMB"},
 	  { name: "Drive Me Crazy", key: "DMC"},	  
 	  { name: "Exclusive Memory", key: "EM"},
 	  { name: "Five Hearts Under One Roof", key: "FHUOR"},
@@ -896,4 +897,34 @@ dataSet[dataSetVersion].characterData = [
       groups: ["MlwtGG"]
     }
   },
+  //Don't Fool Me, Beauties!
+  
+  {
+    name: "Ah-young",
+    img: "EFtuHhh.png",
+    opts: {
+      groups: ["DFMB"]
+    }
+  },
+  {
+    name: "Bit-na",
+    img: "ENLjcXr.png",
+    opts: {
+      groups: ["DFMB"]
+    }
+  },
+  {
+    name: "Ga-Eun",
+    img: "QqnyYvw.png",
+    opts: {
+      groups: ["DFMB"]
+    }
+  },
+  {
+    name: "Ji-woo",
+    img: "oJNXqnN.png",
+    opts: {
+      groups: ["DFMB"]
+    }
+  }
 ]
