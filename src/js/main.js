@@ -853,10 +853,13 @@ function setLatestDataset() {
 function populateOptions() {
   const optList = document.querySelector('.options');
   const optInsert = (name, id, tooltip, checked = true, disabled = false) => {
-    return `<div class="col-6 col-md-4 col-xl-3"><label title="${tooltip?tooltip:name}"><input id="cb-${id}" name="${id.slice(0, 6)}" type="checkbox" ${checked?'checked':''} ${disabled?'disabled':''} > ${name}</label></div>`;
+    return `<div class="col-6 col-md-4 col-xl-3"><label title="${tooltip?tooltip:name}"><input id="cb-${id}" name="${id.slice(0, 6)}" type="checkbox" ${checked?'checked':''} ${disabled?'disabled':''} class="checkboxes"> ${name}</label></div>`;
   };
   const optInsertLarge = (name, id, tooltip, checked = true) => {
     return `<div class="col-12 large option text-center"><label title="${tooltip?tooltip:name}"><input id="cbgroup-${id}" name="rb" type="radio" ${checked?'checked':''}> ${name}</label></div>`;
+  };
+  const optInsertSelect = () => {
+	return `<div class="col-12"><label id="selectAllLabel" title="Select to select/unselect all on the list"><input id="selectAllCheckbox" type="checkbox" checked><span class="label-text"> Unselect All</label></div>`;
   };
 
   /** Clear out any previous options. */
@@ -866,6 +869,7 @@ function populateOptions() {
   options.forEach(opt => {
     if ('sub' in opt) {
       optList.insertAdjacentHTML('beforeend', optInsertLarge(opt.name, opt.key, opt.tooltip, opt.checked));
+	  optList.insertAdjacentHTML('beforeend', optInsertSelect());
       opt.sub.forEach((subopt, subindex) => {
         optList.insertAdjacentHTML('beforeend', optInsert(subopt.name, `${opt.key}-${subindex}`, subopt.tooltip, subopt.checked, opt.checked === false));
       });
